@@ -1,51 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MRT-3 Fare Matrix</title>
+	<title>Fare Matrix</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
 	<!-- GOOGLE FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-sm">
+
 	<div class="container-fluid">
-
-		<a class="navbar-brand" href="index.html">
-			<img src="logo.png" height="50">
-			eSakayMo
+	<!-- LOGO-->
+		<a class="navbar-brand d-flex align-items-center" href="index.html">
+			<img src="logo.png" height="40">
+			<span class="ms-2" id="logo">eSakayMo</span>
 		</a>
-
+	<!-- MENU -->
 		<ul class="navbar-nav mx-auto">
-			<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="farematrix.html">Fare Matrix</a></li>
-			<li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-			<li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
-			<li class="nav-item"><a class="nav-link" href="registration.html">Create Account</a></li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="farematrix.html">Fare Matrix</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="schedule.html">Schedule</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="help.html">Help</a>
+			</li>
+
 		</ul>
 
-		<form class="d-flex">
-			<input class="form-control me-2" type="text" placeholder="Search">
-			<button class="btn btn-primary" type="button">Search</button>
-		</form>
+		<a href="registration.html" class="btn btn-primary">
+			Register
+		</a>
 
 	</div>
 </nav>
 
-<!-- FARE MATRIX -->
-<div class="container text-center mt-5">
-	<h1>MRT-3 Fare Matrix</h1>
-	<p>Official fare chart for MRT-3 stations.</p>
+<!-- CALCULATOR -->
+<div class="container mt-5" id="matrix">
 
-	<img src="farematrix.jpg" class="img-fluid mt-4">
+	<h1 class="text-center">MRT-3 Fare Calculator</h1>
+
+	<div class="card p-4 mt-4">
+
+		<div class="row">
+
+			<!-- PICK UP -->
+			<div class="col-md-4">
+				<label>Pick-up Station</label>
+				<select id="pickup" class="form-select">
+					<option value="0">North Ave</option>
+					<option value="1">Quezon Ave</option>
+					<option value="2">Kamuning</option>
+					<option value="3">Cubao</option>
+					<option value="4">Santolan</option>
+					<option value="5">Ortigas</option>
+					<option value="6">Shaw Blvd</option>
+					<option value="7">Boni</option>
+					<option value="8">Guadalupe</option>
+					<option value="9">Buendia</option>
+					<option value="10">Ayala</option>
+					<option value="11">Magallanes</option>
+					<option value="12">Taft Ave</option>
+				</select>
+
+			</div>
+
+			<!-- DROP OFF -->
+			<div class="col-md-4">
+				<label>Drop-off Station</label>
+				<select id="dropoff" class="form-select">
+					<option value="0">North Ave</option>
+					<option value="1">Quezon Ave</option>
+					<option value="2">Kamuning</option>
+					<option value="3">Cubao</option>
+					<option value="4">Santolan</option>
+					<option value="5">Ortigas</option>
+					<option value="6">Shaw Blvd</option>
+					<option value="7">Boni</option>
+					<option value="8">Guadalupe</option>
+					<option value="9">Buendia</option>
+					<option value="10">Ayala</option>
+					<option value="11">Magallanes</option>
+					<option value="12">Taft Ave</option>
+				</select>
+			</div>
+
+			<!-- TYPE -->
+			<div class="col-md-4">
+				<label>Passenger Type</label>
+				<select id="discount" class="form-select">
+					<option value="regular">Regular</option>
+					<option value="student">Student</option>
+					<option value="senior">Senior</option>
+					<option value="pwd">PWD</option>
+				</select>
+			</div>
+
+		</div>
+
+
+		<div class="text-center mt-4">
+			<button class="btn btn-primary" onclick="calculateFare()">
+				Calculate Fare
+			</button>
+		</div>
+
+		<div class="text-center mt-3">
+			<h3 id="fareOutput"></h3>
+		</div>
+	</div>
 </div>
 
 <!-- FOOTER -->
@@ -59,7 +140,6 @@
 	</p>
 </footer>
 
+<script src="proj.js"></script>
 </body>
 </html>
-
-
