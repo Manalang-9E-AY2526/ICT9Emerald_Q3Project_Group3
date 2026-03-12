@@ -71,5 +71,10 @@ body{
     border-radius: 15px;
 }
 
+.avatar{
+    width:120px;
+    border-radius:50%;
+    margin-bottom:20px;
+
 
 
