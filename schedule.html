@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MRT-3 Schedule</title>
+	<title>MRT Schedule</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
 	<!-- GOOGLE FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-sm">
+
 	<div class="container-fluid">
-
-		<a class="navbar-brand" href="index.html">
-			<img src="logo.png" height="50">
-			eSakayMo
+	<!-- LOGO-->
+		<a class="navbar-brand d-flex align-items-center" href="index.html">
+			<img src="logo.png" height="40">
+			<span class="ms-2" id="logo">eSakayMo</span>
 		</a>
-
+	<!-- MENU -->
 		<ul class="navbar-nav mx-auto">
-			<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="farematrix.html">Fare Matrix</a></li>
-			<li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-			<li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
-			<li class="nav-item"><a class="nav-link" href="registration.html">Create Account</a></li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="farematrix.html">Fare Matrix</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="schedule.html">Schedule</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="help.html">Help</a>
+			</li>
+
 		</ul>
 
-		<form class="d-flex">
-			<input class="form-control me-2" type="text" placeholder="Search">
-			<button class="btn btn-primary" type="button">Search</button>
-		</form>
+		<a href="registration.html" class="btn btn-primary">
+			Register
+		</a>
 
 	</div>
 </nav>
 
-<!-- SCHED -->
-<div class="container text-center mt-5">
+<!-- CONTENT -->
+<div class="container text-center mt-5" id="sched">
 
 	<h1>MRT-3 Train Schedule</h1>
 
-	<p>Approximate operating hours of MRT-3.</p>
+	<p>Below is the operating schedule of MRT-3.</p>
 
 	<table class="table table-bordered mt-4">
 
-		<tr>
-			<th>Day</th>
-			<th>First Train</th>
-			<th>Last Train</th>
-		</tr>
+		<thead>
+			<tr>
+				<th>Day</th>
+				<th>First Train</th>
+				<th>Last Train</th>
+			</tr>
+		</thead>
 
-		<tr>
-			<td>Monday – Friday</td>
-			<td>4:30 AM</td>
-			<td>10:30 PM</td>
-		</tr>
+		<tbody>
+			<tr>
+				<td>Monday - Friday</td>
+				<td>4:30 AM</td>
+				<td>10:30 PM</td>
+			</tr>
 
-		<tr>
-			<td>Saturday – Sunday</td>
-			<td>5:00 AM</td>
-			<td>10:00 PM</td>
-		</tr>
+			<tr>
+				<td>Saturday</td>
+				<td>4:30 AM</td>
+				<td>10:00 PM</td>
+			</tr>
+
+			<tr>
+				<td>Sunday / Holidays</td>
+				<td>5:00 AM</td>
+				<td>9:30 PM</td>
+			</tr>
+		</tbody>
 
 	</table>
 
@@ -75,12 +97,9 @@
 <!-- FOOTER -->
 <footer class="text-center mt-5 p-3">
 	<p>
-		Manalang, Bower, Ledesma, Sanchez, Flores<br>
-		9 - Emerald
-	</p>
+		9 - Emerald | Manalang, Bower, Ledesma, Sanchez, Flores <br>
 
-	<p>
-		Source:<br>
+		Source:
 		<a href="https://www.dotrmrt3.gov.ph/" target="_blank">
 			https://www.dotrmrt3.gov.ph/
 		</a>
@@ -89,4 +108,3 @@
 
 </body>
 </html>
-
